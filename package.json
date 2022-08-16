@@ -1,0 +1,9 @@
+{
+  "name": "ms",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A millisecond conversion utility",
+  "main": "src/index.js",
+  "author": "Cit_999",
+  "license": "ISC"
+}
