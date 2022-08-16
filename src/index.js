@@ -87,7 +87,3 @@ export function format(ms, type) {
         return res(timestamp.trim() || undefined);
     });
 }
-
-(async () => {
-    console.log(await convertToMS("1 day 10 hours"))
-})();
