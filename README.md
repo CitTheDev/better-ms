@@ -3,7 +3,7 @@
 ## Features
 - Can fetch all timestamps from a string and convert it
 - Works with [Node.js](https://nodejs.org) and in the browser
-- 
+- 100% promise-based
 
 ## Examples
 ```js
