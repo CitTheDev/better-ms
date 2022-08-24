@@ -45,7 +45,7 @@ export function convertToMS(value) {
 /**
  * Format a number to long or short
  * @param {number} ms
- * @param {"long" | "short"} type
+ * @param {import(".").FormatOptions} type
  * @returns {Promise<string | undefined>}
  */
 export function format(ms, type) {
