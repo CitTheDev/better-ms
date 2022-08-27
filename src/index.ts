@@ -11,7 +11,7 @@ const second = 1_000;
  * @param {string | number} value 
  * @returns {Promise<number | undefined>}
  */
-export function convertToMS(value) {
+export function convertToMS(value: string | number): Promise<number | undefined> {
     return new Promise((res, rej) => {
         if (typeof value !== "string" && typeof value !== "number") return rej(new TypeError("Value must be a string or number"));
         if (typeof value === "number" && !isFinite(value)) return rej(new TypeError("Value must be a finite number"));
@@ -45,10 +45,10 @@ export function convertToMS(value) {
 /**
  * Format a number to long or short
  * @param {number} ms
- * @param {import(".").FormatOptions} type
+ * @param {"long" | "short"} type
  * @returns {Promise<string | undefined>}
  */
-export function format(ms, type) {
+export function format(ms: number, type: "long" | "short"): Promise<string | undefined> {
     return new Promise((res, rej) => {
         if (!["long", "short"].includes(type)) return rej(new TypeError("Type long or short is required"));
         let milliseconds = Math.abs(ms);

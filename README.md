@@ -2,8 +2,8 @@
 
 ## Features
 - Can fetch all timestamps from a string and convert it
-- Works with [Node.js](https://nodejs.org) and in the browser
-- 100% promise-based
+- 100% Promise-based
+- Type declarations included for TypeScript users
 
 ## Examples
 ```js
