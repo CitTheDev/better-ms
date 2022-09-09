@@ -1,9 +1,21 @@
 {
-  "name": "@cit999/ms",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "A millisecond conversion utility",
-  "main": "dist/index.js",
-  "author": "cit999",
-  "license": "MIT"
+    "name": "@cit999/ms",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "A millisecond conversion utility",
+    "main": "dist/index.js",
+    "author": "cit999",
+    "license": "MIT",
+    "engines": {
+        "node": ">=16.9.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cit999/ms.git"
+    },
+    "keywords": [],
+    "bugs": {
+        "url": "https://github.com/cit999/ms/issues"
+    },
+    "homepage": "https://github.com/cit999/ms#readme"
 }
