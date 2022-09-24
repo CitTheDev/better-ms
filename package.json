@@ -11,11 +11,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/cit999/ms.git"
+        "url": "git+https://github.com/CitTheDev/ms.git"
     },
     "keywords": [],
     "bugs": {
-        "url": "https://github.com/cit999/ms/issues"
+        "url": "https://github.com/CitTheDev/ms/issues"
     },
-    "homepage": "https://github.com/cit999/ms#readme"
+    "homepage": "https://github.com/CitTheDev/ms#readme"
 }
