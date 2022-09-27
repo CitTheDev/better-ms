@@ -8,16 +8,14 @@ const second = 1_000;
 
 /**
  * Format the given string or number to milliseconds
- * @param {string | number} value 
- * @returns {Promise<number | undefined>}
  */
-export function convertToMS(value: string | number): Promise<number | undefined> {
+export function ms(value: string | number): Promise<number | undefined> {
     return new Promise((res, rej) => {
         if (typeof value !== "string" && typeof value !== "number") return rej(new TypeError("Value must be a string or number"));
         if (typeof value === "number" && !isFinite(value)) return rej(new TypeError("Value must be a finite number"));
         if (typeof value === "number") value = Math.abs(value) + "ms";
 
-        const matchArray = value.matchAll(/\d+\.*\d*\s*(?:years?|yrs?|y|months?|mnth|mth|weeks?|w|days?|d|hours?|min(?:ute)?s?|sec(?:ond)?s?|millisec(?:ond)?s?|msecs?|ms)/gi);
+        const matchArray = value.matchAll(/(\d+\.*\d*)\s*(?:years?|yrs?|y|months?|mnth|mth|weeks?|w|days?|d|hours?|min(?:ute)?s?|sec(?:ond)?s?|millisec(?:ond)?s?|msecs?|ms)/gi);
         if (!matchArray) return res(undefined);
         let milliseconds = 0;
 
@@ -44,9 +42,6 @@ export function convertToMS(value: string | number): Promise<number | undefined>
 
 /**
  * Format a number to long or short
- * @param {number} ms
- * @param {"long" | "short"} type
- * @returns {Promise<string | undefined>}
  */
 export function format(ms: number, type: "long" | "short"): Promise<string | undefined> {
     return new Promise((res, rej) => {
