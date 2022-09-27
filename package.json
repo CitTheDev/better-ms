@@ -1,7 +1,6 @@
 {
     "name": "@cit999/ms",
     "version": "1.1.0",
-    "type": "module",
     "description": "A millisecond conversion utility",
     "main": "dist/index.js",
     "author": "cit999",
