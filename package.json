@@ -1,22 +1,11 @@
 {
     "name": "@cit999/ms",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "description": "A millisecond conversion utility",
     "main": "dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/index.mjs",
-            "types": "./dist/index.d.ts"
-        }
-    },
-    "author": "cit999",
+    "type": "module",
+    "author": "CitTheDev",
     "license": "MIT",
-    "scripts": {
-        "compile": "node scripts/compile"
-    },
     "engines": {
         "node": ">=16.9.0"
     },
