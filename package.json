@@ -7,11 +7,11 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/CitTheDev/ms.git"
+        "url": "git+https://github.com/CitTheDev/better-ms.git"
     },
     "keywords": [],
     "bugs": {
-        "url": "https://github.com/CitTheDev/ms/issues"
+        "url": "https://github.com/CitTheDev/better-ms/issues"
     },
-    "homepage": "https://github.com/CitTheDev/ms#readme"
+    "homepage": "https://github.com/CitTheDev/better-ms#readme"
 }
