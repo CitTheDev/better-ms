@@ -5,6 +5,9 @@
     "main": "dist/index.js",
     "author": "CitTheDev",
     "license": "MIT",
+    "files": [
+        "dist"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/CitTheDev/better-ms.git"
