@@ -1,6 +1,6 @@
 {
     "name": "ms-better",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A useful millisecond conversion utility which has many features",
     "main": "dist/index.js",
     "author": "CitTheDev",
