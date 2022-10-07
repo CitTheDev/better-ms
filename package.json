@@ -1,13 +1,10 @@
 {
     "name": "ms-better",
     "version": "1.0.0",
-    "description": "A millisecond conversion utility",
+    "description": "A useful millisecond conversion utility which has many features",
     "main": "dist/index.js",
     "author": "CitTheDev",
     "license": "MIT",
-    "engines": {
-        "node": ">=16.9.0"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/CitTheDev/ms.git"
