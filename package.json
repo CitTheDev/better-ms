@@ -1,5 +1,5 @@
 {
-    "name": "@cit999/ms",
+    "name": "ms-better",
     "version": "1.0.0",
     "description": "A millisecond conversion utility",
     "main": "dist/index.js",
