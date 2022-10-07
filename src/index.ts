@@ -1,10 +1,12 @@
-const year = 31_557_600_000;
-const month = 2_592_000_000;
-const week = 604_800_000;
-const day = 86_400_000;
-const hour = 3_600_000;
-const minute = 60_000;
-const second = 1_000;
+export enum Timestamps {
+    Year = 31_557_600_000,
+    Month = 2_592_000_000,
+    Week = 604_800_000,
+    Day = 86_400_000,
+    Hour = 3_600_000,
+    Minute = 60_000,
+    Second = 1_000
+}
 
 /**
  * Format the given string or number to milliseconds
@@ -26,13 +28,13 @@ export function ms(value: string | number): Promise<number | undefined> {
             const number = parseFloat(match[1]);
             const type = match[2].toLowerCase();
 
-            if (["years", "year", "yrs", "yr", "y"].includes(type)) milliseconds += number * year;
-            if (["months", "month", "mnth", "mth"].includes(type)) milliseconds += number * month;
-            if (["weeks", "week", "w"].includes(type)) milliseconds += number * week;
-            if (["days", "day", "d"].includes(type)) milliseconds += number * day;
-            if (["hours", "hour", "hrs", "hr", "h"].includes(type)) milliseconds += number * hour;
-            if (["minutes", "minute", "mins", "min", "m"].includes(type)) milliseconds += number * minute;
-            if (["seconds", "second", "secs", "sec", "s"].includes(type)) milliseconds += number * second;
+            if (["years", "year", "yrs", "yr", "y"].includes(type)) milliseconds += number * Timestamps.Year;
+            if (["months", "month", "mnth", "mth"].includes(type)) milliseconds += number * Timestamps.Month;
+            if (["weeks", "week", "w"].includes(type)) milliseconds += number * Timestamps.Week;
+            if (["days", "day", "d"].includes(type)) milliseconds += number * Timestamps.Day;
+            if (["hours", "hour", "hrs", "hr", "h"].includes(type)) milliseconds += number * Timestamps.Hour;
+            if (["minutes", "minute", "mins", "min", "m"].includes(type)) milliseconds += number * Timestamps.Minute;
+            if (["seconds", "second", "secs", "sec", "s"].includes(type)) milliseconds += number * Timestamps.Second;
             if (["milliseconds", "millisecond", "msecs", "msec", "ms"].includes(type)) milliseconds += number;
         }
 
@@ -48,26 +50,26 @@ export function format(ms: number, type: "long" | "short"): Promise<string | und
         if (!["long", "short"].includes(type)) return rej(new TypeError("Type long or short is required"));
         let milliseconds = Math.abs(ms);
 
-        const years = Math.floor(milliseconds / year);
-        if (years) milliseconds -= years * year;
+        const years = Math.floor(milliseconds / Timestamps.Year);
+        if (years) milliseconds -= years * Timestamps.Year;
 
-        const months = Math.floor(milliseconds / month);
-        if (months) milliseconds -= months * month;
+        const months = Math.floor(milliseconds / Timestamps.Month);
+        if (months) milliseconds -= months * Timestamps.Month;
 
-        const weeks = Math.floor(milliseconds / week);
-        if (weeks) milliseconds -= weeks * week;
+        const weeks = Math.floor(milliseconds / Timestamps.Week);
+        if (weeks) milliseconds -= weeks * Timestamps.Week;
 
-        const days = Math.floor(milliseconds / day);
-        if (days) milliseconds -= days * day;
+        const days = Math.floor(milliseconds / Timestamps.Day);
+        if (days) milliseconds -= days * Timestamps.Day;
 
-        const hours = Math.floor(milliseconds / hour);
-        if (hours) milliseconds -= hours * hour;
+        const hours = Math.floor(milliseconds / Timestamps.Hour);
+        if (hours) milliseconds -= hours * Timestamps.Hour;
 
-        const minutes = Math.floor(milliseconds / minute);
-        if (minutes) milliseconds -= minutes * minute;
+        const minutes = Math.floor(milliseconds / Timestamps.Minute);
+        if (minutes) milliseconds -= minutes * Timestamps.Minute;
 
-        const seconds = Math.floor(milliseconds / second);
-        if (seconds) milliseconds -= seconds * second;
+        const seconds = Math.floor(milliseconds / Timestamps.Second);
+        if (seconds) milliseconds -= seconds * Timestamps.Second;
 
         const timestamp = 
             (years > 0 ? (years + (type === "long" ? ` year${years > 1 ? "s" : ""} ` : "y ")) : "") +
