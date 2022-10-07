@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "A millisecond conversion utility",
     "main": "dist/index.js",
-    "type": "module",
     "author": "CitTheDev",
     "license": "MIT",
     "engines": {

@@ -4,6 +4,7 @@
 - Can fetch all timestamps from a string and convert it
 - 100% Promise-based
 - Type declarations included for TypeScript users
+- This package supports both ESM and CommonJS
 
 ## Examples
 ```js
@@ -20,6 +21,3 @@ format(1000, "short") // "1s"
 format(31557601000, "long") // "1 year 1 second"
 format(31557601000, "short") // "1y 1s"
 ```
-
-# Note
-> This is an ESM only module which means you cannot use this package with CommonJS. CommonJS support will not be provided

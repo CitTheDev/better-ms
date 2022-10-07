@@ -70,14 +70,14 @@ export function format(ms: number, type: "long" | "short"): Promise<string | und
         if (seconds) milliseconds -= seconds * second;
 
         const timestamp = 
-            (years > 0 ? (type === "long" ? `${years} year${years > 1 ? "s" : ""} ` : `${years}y `) : "") +
-            (months > 0 ? (type === "long" ? `${months} month${months > 1 ? "s" : ""} ` : `${months}mth `) : "") +
-            (weeks > 0 ? (type === "long" ? `${weeks} week${weeks > 1 ? "s" : ""} ` : `${weeks}w `) : "") +
-            (days > 0 ? (type === "long" ? `${days} day${days > 1 ? "s" : ""} ` : `${days}d `) : "") +
-            (hours > 0 ? (type === "long" ? `${hours} hour${hours > 1 ? "s" : ""} ` : `${hours}h `) : "") +
-            (minutes > 0 ? (type === "long" ? `${minutes} minute${minutes > 1 ? "s" : ""} ` : `${minutes}m `) : "") +
-            (seconds > 0 ? (type === "long" ? `${seconds} second${seconds > 1 ? "s" : ""} ` : `${seconds}s `) : "") +
-            (milliseconds > 0 ? (type === "long" ? `${milliseconds} millisecond${milliseconds > 1 ? "s" : ""} ` : `${milliseconds}ms `) : "");
+            (years > 0 ? (years + (type === "long" ? ` year${years > 1 ? "s" : ""} ` : "y ")) : "") +
+            (months > 0 ? (months + (type === "long" ? ` month${months > 1 ? "s" : ""} ` : "mth ")) : "") +
+            (weeks > 0 ? (weeks + (type === "long" ? ` week${weeks > 1 ? "s" : ""} ` : "w ")) : "") +
+            (days > 0 ? (days + (type === "long" ? ` day${days > 1 ? "s" : ""} ` : "d ")) : "") +
+            (hours > 0 ? (hours + (type === "long" ? ` hour${hours > 1 ? "s" : ""} ` : "h ")) : "") +
+            (minutes > 0 ? (minutes + (type === "long" ? ` minute${minutes > 1 ? "s" : ""} ` : "m ")) : "") +
+            (seconds > 0 ? (seconds + (type === "long" ? ` second${seconds > 1 ? "s" : ""} ` : "s ")) : "") +
+            (milliseconds > 0 ? (milliseconds + (type === "long" ? ` millisecond${milliseconds > 1 ? "s" : ""} ` : "ms")) : "");
 
         return res(timestamp.trim() || undefined);
     });
