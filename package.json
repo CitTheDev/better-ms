@@ -10,11 +10,11 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/CitTheDev/better-ms.git"
+        "url": "git+https://github.com/CitTheDev/ms-better.git"
     },
     "keywords": [],
     "bugs": {
-        "url": "https://github.com/CitTheDev/better-ms/issues"
+        "url": "https://github.com/CitTheDev/ms-better/issues"
     },
-    "homepage": "https://github.com/CitTheDev/better-ms#readme"
+    "homepage": "https://github.com/CitTheDev/ms-better#readme"
 }
